@@ -1,0 +1,46 @@
+using System;
+using System.Globalization;
+
+
+public class Pessoas 
+{
+	public string Nome;
+	public double Idade;
+	
+}
+
+public class Program
+{
+	
+	
+	public static void Main()
+	{
+		Pessoas a, b;
+	
+		a = new Pessoas();
+		b = new Pessoas();
+		
+		Console.WriteLine("Dados da primeira pessoa: " );
+		
+		Console.Write("Nome:");
+		a.Nome = Console.ReadLine(); 
+		
+		Console.Write("Idade");
+		a.Idade = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+		
+		Console.Write("Nome:");
+		b.Nome = Console.ReadLine();
+		
+		Console.Write("Idade");
+		b.Idade = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+		
+		if(a.Idade > b.Idade)
+		{
+			Console.WriteLine("A pessoa mais velha eh: " + a.Nome);
+		}
+		else
+		{
+			Console.WriteLine("A pessoas mais velha eh: " + b.Nome);
+		}
+	}
+}
